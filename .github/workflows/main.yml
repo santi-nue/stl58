@@ -15,9 +15,11 @@ jobs:
     - name: Install Qt5
       uses: WillBrennan/yaqti@2021.07.27.1
       with:
-        version: '5.15.2'
+        version: ${{env.QT_VERSION}}
         os: 'linux'
-        target: 'desktop'
+        platforms: 'desktop'
+        modules: 'qtcharts'
+        install-deps: "true"
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
