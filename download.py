@@ -28,7 +28,7 @@ args = parser.parse_args()
 
 
 DOWNLOAD_PATH = "/tmp/{}".format(args.url.split('?v=')[-1])
-format_code = 'bestvideo[ext=mp4]+bestaudio[ext=m4a]'
+format_code = 'bestvideo[ext=mp4]'
 
 ydl = yt_dlp.YoutubeDL({'format': format_code,'outtmpl': '{}/%(id)s.%(ext)s'.format(DOWNLOAD_PATH),
                             'nocheckcertificate': True})
