@@ -12,6 +12,10 @@ jobs:
     - name: Install libxcb-xinerama0
       run: sudo apt-get update && sudo apt-get install libxcb-xinerama0 && sudo apt remove qtchooser
     - uses: actions/checkout@v2
+    - name: Setup OpenCV
+      uses: Dovyski/setup-opencv-action@v1.1
+      with:
+        opencv-version: '4.0.0'
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
