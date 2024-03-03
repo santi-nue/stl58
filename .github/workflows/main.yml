@@ -1,0 +1,19 @@
+name: Python Script Execution
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_python_script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Execute Python script
+      run: python download.py
