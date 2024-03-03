@@ -1,4 +1,4 @@
-69274369 8name: Python CI
+name: Python CI
 
 on:
   push:
