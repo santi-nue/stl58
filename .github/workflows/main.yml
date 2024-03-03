@@ -18,7 +18,6 @@ jobs:
         python-version: '3.7'
     - name: Install dependencies
       run: |
-        export QT_QPA_PLATFORM_PLUGIN_PATH=/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/cv2/qt/plugins
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         python -m pip install -U --pre yt-dlp
