@@ -1,4 +1,4 @@
-name: Python CI
+49name: Python CI
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       uses: WillBrennan/yaqti@2021.07.27.1
       with:
         version: '5.15.2'
-        host: 'linux'
+        os: 'linux'
         target: 'desktop'
     - name: Set up Python
       uses: actions/setup-python@v2
