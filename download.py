@@ -15,7 +15,7 @@ import cv2
 from fpdf import FPDF
 from PIL import Image
 
-DOWNLOAD_PATH = "/tmp/{}"
+# DOWNLOAD_PATH = "/tmp/{}"
 
 TOP_SHEET_PERCENTAGE = 0
 BOTTOM_SHEET_PERCENTAGE = 0.3
@@ -26,8 +26,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument("url", type=str, default='https://www.youtube.com/watch?v=vBI98bXwUB0', nargs='?')
 args = parser.parse_args()
 
-
-DOWNLOAD_PATH = "/tmp/{}".format(args.url.split('?v=')[-1])
+# DOWNLOAD_PATH = "/tmp/{}".format(args.url.split('?v=')[-1])
+DOWNLOAD_PATH = "./{}".format(args.url.split('?v=')[-1])
 format_code = 'bestvideo[ext=mp4]'
 
 ydl = yt_dlp.YoutubeDL({'format': format_code,'outtmpl': '{}/%(id)s.%(ext)s'.format(DOWNLOAD_PATH),
