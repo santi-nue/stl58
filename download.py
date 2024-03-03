@@ -54,6 +54,7 @@ video_filenames = []
 
 # Iterate through the files and filter out video files
 for file in files:
+    print(file)
     if file.endswith((".mp4", ".avi", ".mkv", ".mov")):
         video_filenames.append(file)
 
