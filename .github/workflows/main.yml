@@ -21,4 +21,4 @@ jobs:
         pip install -r requirements.txt
     - name: Run Python script
       run: |
-        python download.py
+        python download.py https://www.youtube.com/watch?v=SckYas-Uy24
