@@ -12,10 +12,12 @@ jobs:
     - name: Install libxcb-xinerama0
       run: sudo apt-get update && sudo apt-get install libxcb-xinerama0 && sudo apt remove qtchooser
     - uses: actions/checkout@v2
-    - name: Install Qt5/Qt6
-      uses: yaqti/install-qt-action@v1
+    - name: Install Qt5
+      uses: WillBrennan/yaqti@v1
       with:
-        qt-version: '5.15.2'
+        version: '5.15.2'
+        host: 'linux'
+        target: 'desktop'
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
