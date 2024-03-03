@@ -13,7 +13,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install libxcb-xinerama0 && sudo apt remove qtchooser
     - uses: actions/checkout@v2
     - name: Install Qt5
-      uses: WillBrennan/yaqti@v1
+      uses: WillBrennan/yaqti@2021.07.27.1
       with:
         version: '5.15.2'
         host: 'linux'
