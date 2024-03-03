@@ -1,0 +1,6 @@
+numpy
+youtube-downloader
+matplotlib
+scikit-video
+tqdm
+FPDF
