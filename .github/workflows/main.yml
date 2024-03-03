@@ -7,7 +7,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - name: Install libxcb-xinerama0
       run: sudo apt-get update && sudo apt-get install libxcb-xinerama0 && sudo apt remove qtchooser
