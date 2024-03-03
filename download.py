@@ -8,7 +8,7 @@ import shutil
 
 import argparse
 import numpy as np
-import youtube_dl
+import yt_dlp
 from tqdm import tqdm
 import cv2
 
@@ -28,7 +28,8 @@ args = parser.parse_args()
 
 
 DOWNLOAD_PATH = "/tmp/{}".format(args.url.split('?v=')[-1])
-ydl = youtube_dl.YoutubeDL({'outtmpl': '{}/%(id)s.%(ext)s'.format(DOWNLOAD_PATH),
+
+ydl = ydl_dlp.YoutubeDL({'outtmpl': '{}/%(id)s.%(ext)s'.format(DOWNLOAD_PATH),
                             'nocheckcertificate': True})
 if os.path.exists(DOWNLOAD_PATH):
   shutil.rmtree(DOWNLOAD_PATH)
