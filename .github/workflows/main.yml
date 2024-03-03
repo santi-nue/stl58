@@ -17,6 +17,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
         python -m pip install -U --pre yt-dlp
+        python -m pip install --force-reinstall ffmpeg-python
     - name: Run Python script
       run: |
         python download.py https://www.youtube.com/watch?v=SckYas-Uy24
