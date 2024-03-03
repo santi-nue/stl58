@@ -31,7 +31,7 @@ DOWNLOAD_PATH = "/tmp/{}".format(args.url.split('?v=')[-1])
 format_code = 'bestvideo[ext=mp4]'
 
 ydl = yt_dlp.YoutubeDL({'format': format_code,'outtmpl': '{}/%(id)s.%(ext)s'.format(DOWNLOAD_PATH),
-                            'nocheckcertificate': True, playlist_items': '1'  })
+                            'nocheckcertificate': True, 'playlist_items': '1'  })
 if os.path.exists(DOWNLOAD_PATH):
   shutil.rmtree(DOWNLOAD_PATH)
 os.makedirs(DOWNLOAD_PATH)
