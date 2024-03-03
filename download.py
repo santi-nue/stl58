@@ -48,8 +48,17 @@ if 'entries' in result:
 
 title = result['title']
 
-video_filenames = os.listdir(DOWNLOAD_PATH)
-assert len(video_filenames) > 0, "More than 1 video found in {}.".format(DOWNLOAD_PATH)
+files = os.listdir(DOWNLOAD_PATH)
+
+video_filenames = []
+
+# Iterate through the files and filter out video files
+for file in files:
+    if file.endswith((".mp4", ".avi", ".mkv", ".mov")):
+        video_filenames.append(file)
+
+# video_filenames = os.listdir(DOWNLOAD_PATH)
+# assert len(video_filenames) > 0, "More than 1 video found in {}.".format(DOWNLOAD_PATH)
 video_filename = DOWNLOAD_PATH + '/' + video_filenames[0]
 
 cap = cv2.VideoCapture(video_filename)
