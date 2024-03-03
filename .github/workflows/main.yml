@@ -21,6 +21,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         python -m pip install -U --pre yt-dlp
+        pip install opencv-python --upgrade
     - name: Run Python script
       run: |
         python download.py https://www.youtube.com/watch?v=SckYas-Uy24
