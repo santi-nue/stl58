@@ -1,4 +1,4 @@
-name: Python CI
+69274369 8name: Python CI
 
 on:
   push:
@@ -12,12 +12,14 @@ jobs:
     
     - uses: actions/checkout@v2
     
+    - uses: FedericoCarboni/setup-ffmpeg@v1
+      id: setup-ffmpeg
+    
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
         python -m pip install -U --pre yt-dlp
-        python -m pip install --force-reinstall ffmpeg-python
     - name: Run Python script
       run: |
         python download.py https://www.youtube.com/watch?v=SckYas-Uy24
