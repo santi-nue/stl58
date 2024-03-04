@@ -53,10 +53,11 @@ files = os.listdir(DOWNLOAD_PATH)
 video_filenames = []
 
 # Iterate through the files and filter out video files
-for file in files:
-    print(file)
-    if file.endswith((".mp4", ".avi", ".mkv", ".mov")):
-        video_filenames.append(file)
+for mfile in files:
+    with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+        print(f'{mfile}', file=fh)
+    if mfile.endswith((".mp4", ".avi", ".mkv", ".mov")):
+        video_filenames.append(mfile)
 
 # video_filenames = os.listdir(DOWNLOAD_PATH)
 # assert len(video_filenames) > 0, "More than 1 video found in {}.".format(DOWNLOAD_PATH)
