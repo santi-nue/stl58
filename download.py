@@ -187,7 +187,7 @@ def makePdf(pdfFileName, pages, dir =''):
 
     cover = Image.open(dir + str(pages[0]))
     width, height = cover.size
-
+    pdf.set_font("Arial", size=12)
     pdf = FPDF(unit = "pt", format = [width, height])
 
     for page in pages:
